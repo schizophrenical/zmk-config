@@ -16,7 +16,7 @@
 
 		default_layer {
             macros {
-                ctrl_alt_del : ctrl_alt_del {
+                ctrl_alt_del: ctrl_alt_del {
                     label = "CTRL ALT DEL";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
