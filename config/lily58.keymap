@@ -11,17 +11,18 @@
 
 / {
 
-    macros {
-        ctrl_alt_del : ctrl_alt_del {
-            label = "CTRL ALT DEL";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTRL &kp LALT &kp DELETE>;
-        };
-    };
+    keymap {
 
-	keymap {
-		compatible = "zmk,keymap";
+        compatible = "zmk,keymap";
+
+        macros {
+            ctrl_alt_del : ctrl_alt_del {
+                label = "CTRL ALT DEL";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LCTRL &kp LALT &kp DELETE>;
+            };
+        };
 
 		default_layer {
             // ------------------------------------------------------------------------------------------------------------
