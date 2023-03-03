@@ -11,20 +11,20 @@
 
 / {
 
+    macros {
+        ctrl_alt_del: ctrl_alt_del {
+            label = "CTRL_ALT_DEL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LALT &kp DEL>
+                , <&macro_release &kp LCTRL &kp LALT &kp DEL>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
-
-        macros {
-            ctrl_alt_del: ctrl_alt_del {
-                label = "CTRL_ALT_DEL";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_press &kp LCTRL &kp LALT &kp DEL>
-                    , <&macro_release &kp LCTRL &kp LALT &kp DEL>
-                    ;
-            };
-        };
 
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
