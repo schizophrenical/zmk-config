@@ -22,16 +22,16 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
-
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-            tri_layer {
-                if-layers = <LOWER RAISE>;
-                then-layer = <ADJUST>;
-            };
-        };
 
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
